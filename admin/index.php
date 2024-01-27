@@ -110,7 +110,15 @@ if (isset($_GET['act'])) {
             $listbill = loadall_bill($kyw, 0);
             include 'bill/listbill.php';
             break;
-
+        // bieu do & thong ke
+        case 'thongke':
+            $listthongke = loadall_thongke();
+            include 'thongke/list.php';
+            break;
+        case 'bieudo':
+            $listthongke = loadall_thongke();
+            include 'thongke/bieudo.php';
+            break;
         default:
             include 'home.php';
             break;
