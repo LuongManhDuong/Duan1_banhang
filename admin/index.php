@@ -163,6 +163,16 @@ if (isset($_GET['act'])) {
             $listthongke = loadall_thongke();
             include 'thongke/bieudo.php';
             break;
+        case 'listbill':
+            if (isset($_POST['kyw']) && $_POST['kyw'] != '') {
+                $kyw = $_POST['kyw'];
+            } else {
+                $kyw = '';
+            }
+            $listbill = loadall_bill($kyw, 0);
+            // $listbinhluan = loadall_binhluan(0);
+            include 'bill/listbill.php';
+            break;
         default:
             include 'home.php';
             break;
