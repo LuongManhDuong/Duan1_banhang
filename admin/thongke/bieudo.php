@@ -23,6 +23,7 @@ $i = 1 ;
     }
 ?>
 ]);
+
   // Optional; add a title and set the width and height of the chart
   var options = {'title':'Thống kê sản phẩm theo danh mục', 'width':1100, 'height':800};
 

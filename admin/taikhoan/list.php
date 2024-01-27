@@ -1,3 +1,4 @@
+
 <div class="row">
             <div class="row formtilte">
                 <h1>DANH SÁCH TÀI KHOẢN</h1>
@@ -16,6 +17,7 @@
                             <th>VAI TRÒ</th>
                             <th></th>
                         </tr>
+
                         <?php
                             foreach ($listtaikhoan as $taikhoan) {
                                 extract($taikhoan);
@@ -37,6 +39,8 @@
                                     </tr>';
                             }
                         ?>
+
+                         
                    </table>
                 </div>
                 <div class="row mb10">

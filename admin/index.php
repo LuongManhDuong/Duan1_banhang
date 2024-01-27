@@ -173,6 +173,7 @@ if (isset($_GET['act'])) {
             // $listbinhluan = loadall_binhluan(0);
             include 'bill/listbill.php';
             break;
+
         default:
             include 'home.php';
             break;
