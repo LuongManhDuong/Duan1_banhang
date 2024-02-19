@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="view/css/style.css">
     <title>Du an mau</title>
 </head>
+
 <body>
     <div class="container">
         <div style="margin-top: 10px;" class="row mb header ">
-            <h1 style="line-height: 50px; font-size: 1.2vw; margin-left: 20px;color:white;" >SHOP BÁN HOA</h1>
+            <h1 style="line-height: 50px; font-size: 1.2vw; margin-left: 20px;color:white;">SHOP BÁN HOA</h1>
         </div>
         <div class="row mb menu ">
             <ul>
