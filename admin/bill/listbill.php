@@ -1,23 +1,22 @@
 <div class="row mb">
     <div class="boxtrai mr">
     <div class="row mb">
-        <div class="boxtitle mb">DANH SÁCH ĐƠN HÀNG</div>
-        <form class="mb" action="index.php?act=listbill" method="post">
+        <div class="boxtitle">DANH SÁCH ĐƠN HÀNG</div>
+        <form action="index.php?act=listbill" method="post">
             <input type="text" name="kyw" placeholder="Nhập thêm mã đơn hàng">
             <input type="submit" name="listok" value="GO">
         </form>
-        <div class="row boxcontent formdslh">
+        <div class="row boxcontent cart">
             <table>               
 
                 <tr>
-                    <th>Chọn</th>
-                    <th>Mã đơn hàng</th>
-                    <th>Khách hàng</th>
-                    <th>Số lượng hàng</th>
-                    <th>Giá trị đơn hàng</th>
-                    <th>Trạng thái đơn hàng</th>
-                    <th>Ngày đặt hàng</th>
-                    <th>Thao tác</th>
+                    <th>Mã dh</th>
+                    <th>KH</th>
+                    <th>SLH</th>
+                    <th>GTDH</th>
+                    <th>TTDH</th>
+                    <th>NDH</th>
+                    <th>TT</th>
                 </tr>
                 <?php 
                     foreach ($listbill as $bill) {
@@ -40,7 +39,7 @@
                                     <input type="button" value="Sửa" id="">
                                     <input type="button" value="Xoá" id="">
                                 </td>
-                                </tr>';
+                            </tr>';
                     }
                 ?>
                 

@@ -1,45 +1,45 @@
 <div class="row mb  ">
-            <div class="boxtrai mr  ">
-                <div class="row">
-                    <div class="banner">
-                        <!-- Slideshow container -->
-                        <div class="slideshow-container">
+    <div class="boxtrai mr  ">
+        <div class="row">
+            <div class="banner">
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
 
-                        <!-- Full-width images with number and caption text -->
-                        <div class="mySlides fade">
-                        <!-- <div class="numbertext">1 / 3</div> -->
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
                         <img src="view/anh/300.jpg" style="width:100%">
                         <!-- <div class="text">Caption Text</div> -->
-                        </div>
+                    </div>
 
-                        <div class="mySlides fade">
-                        <!-- <div class="numbertext">2 / 3</div> -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
                         <img src="view/anh/200.jpg" style="width:100%">
                         <!-- <div class="text">Caption Two</div> -->
-                        </div>
+                    </div>
 
-                        <div class="mySlides fade">
-                        <!-- <div class="numbertext">3 / 3</div> -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
                         <img src="view/anh/100.jpg" style="width:100%">
                         <!-- <div class="text">Caption Three</div> -->
-                        </div>
-
-                        <!-- Next and previous buttons -->
-                        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
-                        </div>
-                        <br>
-
-                        <!-- The dots/circles -->
-                        <div style="text-align:center">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        </div>
                     </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-                <div class="row">
-                    <?php
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <?php
                     $i=0;
                         foreach ($spnew as $sp) {
                             extract($sp);
@@ -67,57 +67,12 @@
                                 $i+=1;
                         }
                     ?>
-                    <!-- <div class="boxsp mr ">
-                        <div class="row img "><img src="view/anh/1.jpg" alt=""></div>
-                        <p>$30</p>
-                        <a href="#">Hoa Khai Truong</a>
-                    </div>
-                    <div class="boxsp mr ">
-                        <div class="row img "><img src="view/anh/2.jpg" alt=""></div>
-                        <p>$30</p>
-                        <a href="#">Hoa Khai Truong</a>
-                    </div>
-                    <div class="boxsp ">
-                        <div class="row img "><img src="view/anh/3.jpg" alt=""></div>
-                        <p>$30</p>
-                        <a href="#">Hoa Khai Truong</a>
-                    </div>
-                    <div class="boxsp mr ">
-                        <div class="row img "><img src="view/anh/4.jpg" alt=""></div>
-                        <p>$30</p>
-                        <a href="#">Hoa Khai Truong</a>
-                    </div>
-                    <div class="boxsp mr ">
-                        <div class="row img "><img src="view/anh/5.jpg" alt=""></div>
-                        <p>$30</p>
-                        <a href="#">Hoa Khai Truong</a>
-                    </div>
-                    <div class="boxsp  ">
-                        <div class="row img "><img src="view/anh/6.jpg" alt=""></div>
-                        <p>$30</p>
-                        <a href="#">Hoa Khai Truong</a>
-                    </div>
-                    <div class="boxsp mr ">
-                        <div class="row img "><img src="view/anh/7.jpg" alt=""></div>
-                        <p>$30</p>
-                        <a href="#">Hoa Khai Truong</a>
-                    </div>
-                    <div class="boxsp mr ">
-                        <div class="row img "><img src="view/anh/8.jpg" alt=""></div>
-                        <p>$30</p>
-                        <a href="#">Hoa Khai Truong</a>
-                    </div>
-                    <div class="boxsp ">
-                        <div class="row img "><img src="view/anh/9.jpg" alt=""></div>
-                        <p>$30</p>
-                        <a href="#">Hoa Khai Truong</a>
-                    </div> -->
-                </div>
-            </div>
-             
-            <!-- end trai -->
-            <div class="boxphai">
-                 <?php include "boxright.php"; ?>
-            </div>
-            <!-- end phai -->
         </div>
+    </div>
+
+    <!-- end trai -->
+    <div class="boxphai">
+        <?php include "boxright.php"; ?>
+    </div>
+    <!-- end phai -->
+</div>

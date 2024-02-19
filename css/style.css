@@ -11,11 +11,6 @@
     float: left;
     width: 100%;
 }
-.row2 {
-    float: left;
-    width: 100%;
-    height: 250px;
-}
 .mb{
     margin-bottom: 20px;
 }
@@ -81,13 +76,6 @@
     min-height: 200px;
     background-color: #EEE;
 }
-.boxconten3 {
-    border-left: 1px #CCC solid;
-    border-right: 1px #CCC solid;
-    border-bottom: 1px #CCC solid;
-    min-height: 200px;
-    background-color: white;
-}
 .boxfooter{
     padding: 10px;
     background-color: #eee;
@@ -143,7 +131,6 @@
 }
 
 .formtaikhoan input[type="text"],
-.formtaikhoan input[type="email"],
 .formtaikhoan input[type="password"],
 .formconten input[type="text"]
 {
@@ -158,7 +145,6 @@
 }
 .formtaikhoan input[type="submit"],
 .formconten input[type="submit"],
-.formtaikhoan input[type="reset"],
 .formconten input[type="reset"],
 .formconten input[type="button"]
 {
@@ -375,20 +361,3 @@
   .spct{
     text-align: center;
   }
-  .spct img{
-    width: 50%;
-  }
-  .cart td{
-    border: 1px solid black;
-    /* width: 150px; */
-  }
-  .cart th{
-    border: 1px solid black;
-    /* width: 150px; */
-  }
- .lmd li{
-    list-style: none;
-    text-align: center;
-    margin-top: 20px;
- }
-
