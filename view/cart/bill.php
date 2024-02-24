@@ -41,12 +41,20 @@
 			<div class="row mb">
 				<div class="boxtitle">PHƯƠNG THỨC THANH TOÁN</div>
 				<div class="row boxcontent">
-					<table>
-						<tr>
-							<td><input type="radio" name="pttt" value="1">Thanh toán Online</td>
-							<td><input type="radio" name="pttt" value="2">Thanh toán khi nhận hàng</td>
-						</tr>
-					</table>
+					<!-- <h1 class="title-clickpt">Chọn Phương Thức Thanh Toán</h1> -->
+                    <label>
+                        <input type="checkbox" name="payment_method" value="online" id="onlineCheckbox"> Thanh toán Online
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="payment_method" value="direct" id="directCheckbox"> Thanh toán khi nhận hàng
+                    </label>
+					<div id="paypal-form" style="display: none;">
+                    <h1>
+                        <?php if (isset($selectBox) && $selectBox != "") echo $selectBox; ?>
+                    </h1>
+                    <div id="paypal-button-container"></div>
+                </div>
 				</div>
 			</div>
 			<!-- Thông tin giỏ hàng -->
@@ -68,3 +76,50 @@
 		<?php include 'view/boxright.php'; ?>
 	</div>
 </div>
+<script src="https://www.paypal.com/sdk/js?client-id=AcsHobYlloCKHiAaC05umlZGMWsOOIIXx3VxHjnp7ABcDDXRvbuj-g3IoALDloki_pcF1S-DYBy5pmn5">
+</script>
+
+<script>
+    const onlineCheckbox = document.getElementById('onlineCheckbox');
+    const directCheckbox = document.getElementById('directCheckbox');
+    const paypalForm = document.getElementById('paypal-form');
+
+    onlineCheckbox.addEventListener('change', function() {
+        if (onlineCheckbox.checked) {
+            // If online payment is selected, display the PayPal form
+            paypalForm.style.display = 'block';
+            // Uncheck the direct payment checkbox
+            directCheckbox.checked = false;
+        } else {
+            // If online payment is not selected, hide the PayPal form
+            paypalForm.style.display = 'none';
+        }
+    });
+
+    directCheckbox.addEventListener('change', function() {
+        if (directCheckbox.checked) {
+            // If direct payment is selected, hide the PayPal form
+            paypalForm.style.display = 'none';
+            // Uncheck the online payment checkbox
+            onlineCheckbox.checked = false;
+        }
+    });
+
+
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '20.00'
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Thanh toán thành công!\nID đơn hàng: ' + details.id);
+            });
+        }
+    }).render('#paypal-button-container');
+</script>

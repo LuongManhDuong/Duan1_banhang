@@ -8,7 +8,6 @@
 						<th>Mã đơn hàng</th>
 						<th>Ngày đặt</th>
 						<th>Giá tiền</th>
-						<!-- <th>TỔNG GIÁ TRỊ ĐƠN HÀNG</th> -->
 						<th>Trạng thái</th>
 						<th>Hành động</th>
 						<?php  ?>
@@ -19,18 +18,10 @@
 							$ttdh = get_ttdh($bill['bill_status']);
 							$countsp = loadall_cart_count($bill['id']);
 							echo '<tr>
-                                            <td>DAM - ' .
-								$bill['id'] .
-								'</td>
-                                            <td>' .
-								$bill['ngaydathang'] .
-								'</td>
-                                            <td>' .
-								$bill['total'] .
-								'</td>
-                                            <td>' .
-								$ttdh .
-								'</td> 
+                                <td>DAM - ' .$bill['id'] .'</td>
+                                <td>' .$bill['ngaydathang'] .'</td>
+                                 <td>' .$bill['total'] .'</td>
+                                <td>' .$ttdh .'</td> 
 								<td style="text-align:center">';
 							if ($ttdh != 'Đã hủy') {
 								echo '<a href="index.php?act=delbill&id=' . $bill['id'] . '"><input type="button" value="Hủy đơn"></a>
